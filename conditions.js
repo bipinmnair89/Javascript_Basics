@@ -26,7 +26,7 @@ testIFs(91);
 testIFs(0);
 testIFs(-91);
 
-/* below code for if elseif statement and to understand how switch statement solves it more efficiently */
+/* below code for if elseif statement and to understand how switch statement solves it drawbacks */
 
 function testBrowserUsingIFElse(browserSelected) {
     if(browserSelected == "firefox") {
@@ -44,7 +44,7 @@ function testBrowserUsingIFElse(browserSelected) {
 
 testBrowserUsingIFElse("chrome")
 
-//in above scenario if we are giving browserSelected value as 'chrome' then it will go through each of conditions for firefox, edge, opera and then only prints chrome
+//in above scenario if we are giving browserSelected value as 'chrome' then it will go through each of conditions for firefox, edge, opera before chrome
 //this is an inefficient way when there are many choices, switch solves this problem by direclty going to the specific case
 //in switch statement like loops we can use the break statement to come out once we find a match, but in conditonal statements we can't use break
 

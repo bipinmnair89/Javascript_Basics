@@ -16,11 +16,11 @@ testValue1();
 console.log(firstValue);
 console.log(typeof(firstValue));  //typeof used to know the datatype of the variable
 
-var varTime =3;
+var varTime =2;
 if(varTime <3) {
     var msgV2 = "testing var global scope";
 }
-console.log(msgV2);  //will print even if msgV2 is inside if block because var is having global scope
+console.log(msgV2);  //will print even if msgV2 is inside if block because var is having global/function scope and not block scope(here block is if stmt)
 
 
 var checkDefaultValue;
@@ -35,7 +35,7 @@ secondValue="Tiger";
 console.log(secondValue);
 console.log(typeof(secondValue));
 
-let letTime =3;
+let letTime =2;
 if(letTime <3) {
     let msgV2 = "testing let blocked scope";
 }

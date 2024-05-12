@@ -99,6 +99,8 @@ console.log("last index position - "+lastIndexPosition);
 const flag =mainIndexArray.includes("amazon");
 console.log(flag);
 
+console.log("*******************************************************************************************************************************************************************");
+
 //forEach method - to execute a function on each element of an array
 let count =0;
 mainIndexArray.forEach((ele) => {
@@ -108,7 +110,6 @@ mainIndexArray.forEach((ele) => {
 })
 console.log(count);
 
-console.log("*******************************************************************************************************************************************************************");
 
 //every method - to check if all elements of an array satisfy a condition
 let heroArr = ["Batman", "Superman", "Spiderman"];
