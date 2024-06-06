@@ -45,8 +45,8 @@ function testBrowserUsingIFElse(browserSelected) {
 testBrowserUsingIFElse("chrome")
 
 //in above scenario if we are giving browserSelected value as 'chrome' then it will go through each of conditions for firefox, edge, opera before chrome
-//this is an inefficient way when there are many choices, switch solves this problem by direclty going to the specific case
-//in switch statement like loops we can use the break statement to come out once we find a match, but in conditonal statements we can't use break
+//this is an inefficient way when there are many choices, switch solves this problem by directly going to the specific case
+//in switch statement like loops we can use the break statement to come out once we find a match, but in conditional statements we can't use break
 
 /* below code for switch statement */
 function testBrowserUsingSwitch(browser) {
@@ -68,5 +68,4 @@ function testBrowserUsingSwitch(browser) {
             break;
     }
 }
-
 testBrowserUsingSwitch("safari");

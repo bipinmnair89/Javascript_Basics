@@ -8,6 +8,7 @@
     Function Constructor
     Generator function
     Higher Order Function
+    TODO - Recursive function
 */
 
 
@@ -62,17 +63,17 @@ console.log("Result odd number array by arrow function: "+oddNumbers);
 
 //arrow function with multiple expressions inside {}
 const greaterNumber = (a,b) => { 
-    if(a>b) {
-    console.log("a is greater than b");}
-    else { 
-      console.log("b is greater than a");}
+    if(a>b) { console.log("a is greater than b");
+  }
+    else { console.log("b is greater than a");
+  }
 }
 greaterNumber(10,20);
 
 
 /*Immediately Invoked Function Expression
   -> Is defined and invoked at the same time, no need to explicitly call/invoke it
-  -> Syntax of IIFE - Wrap the function in () and use another () at the end that invokes the function
+  -> Syntax of IIFE - Wrap the function in () and use another () at the end that invokes the function followed by a semicolon
   -> Both Function expression & Arrow function can be used inside IIFE
   -> Usage of IIFE - To have a new scope that works only within the IIFE and doesn't pollute the global scope
 */
