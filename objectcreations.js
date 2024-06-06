@@ -35,3 +35,27 @@ const objectUsingObjectLiterals = {
 console.log(objectUsingObjectLiterals);
 console.log(objectUsingObjectLiterals.addressDetails());
 
+
+/* Constructor Function
+  -> It is a function that can be used to create multiple objects
+  -> this keyword refers to the newly created object
+  -> toString() method is used to print the value inside the function addressDetails by overriding and using a custom implementation
+*/
+
+function EmployeeDetails(name, company, designation) {
+    this.name = name;
+    this.company = company;
+    this.designation = designation;
+    this.addressDetails = function() {
+        return `Address Details of ${this.name} to be updated`;
+    }
+    this.toString = function() {
+        return `Employee Details\n Name: ${this.name}\n Company: ${this.company}\n Designation: ${this.designation}\n Address Details: ${this.addressDetails()}`
+    }
+}
+const employeeA = new EmployeeDetails('John', 'Google', 'Frontend Developer');
+console.log(employeeA.toString());
+const employeeB = new EmployeeDetails('Jane', 'Microsoft', 'Manager');
+console.log(employeeB.toString());
+
+
