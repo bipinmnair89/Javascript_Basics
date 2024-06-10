@@ -89,6 +89,40 @@ console.log(personB.toString());
 
 console.log('*****************************************************************************************************************************************************************');
 
+/* Object.create()
+  -> It is used to create objects from another object
+  -> The Object.create() method accepts 2 arguments
+  -> The first argument is an object that will be used as the prototype of the newly created object
+  -> The second argument is the newly created object which is optional
+  -> In the below code we can see that we are passing writable configurable and enumerable as true while creating second object with same prototype
+  -> This is because by default in ES6 we have writable configurable and enumerable as false for better security
+  -> writable: true means we can change the value of the property
+  -> enumerable: true means we can use the value in loops
+  -> configurable: true means we can delete the property
+  -> useful in implementing inheritance without use of constructor and creating object with custom properties
+
+*/
+
+let personPrototype = { city : 'London',
+                        calculateAge : function() {
+                            let currentYear = new Date().getFullYear();
+                            return currentYear - this.dob;
+                        }
+}
+
+const employeeRollNoA = Object.create(personPrototype);
+employeeRollNoA.name = 'John';
+employeeRollNoA.designation = 'Frontend Developer';
+employeeRollNoA.dob = 1995;
+console.log(employeeRollNoA);
+console.log(employeeRollNoA.calculateAge());
+
+//passing the second argument
+const employeeRollNoB = Object.create(personPrototype, { name : { value : 'Jane', writable : true, enumerable : true, configurable : true },
+                                                        designation : { value : 'Manager', writable : true, enumerable : true, configurable : true },
+                                                        dob : { value : 1990, writable : true, enumerable : true, configurable : true } });
+console.log(employeeRollNoB);
+console.log(employeeRollNoB.calculateAge());
 
 
 
