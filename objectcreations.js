@@ -124,6 +124,38 @@ const employeeRollNoB = Object.create(personPrototype, { name : { value : 'Jane'
 console.log(employeeRollNoB);
 console.log(employeeRollNoB.calculateAge());
 
+console.log('*****************************************************************************************************************************************************************');
+
+/* Object.assign()
+  -> It is used to merge properties of two or more objects
+  -> It will return the merged object
+  -> If we don't give {} as argument then it will modify the value of the first object
+*/
+
+const employeePersonA = {
+    name : 'John',
+    company : 'Google',
+    designation : 'Frontend Developer',
+    yearsOfExperience : 2,
+    previousCompany : 'Microsoft',
+    salary : undefined,
+    skills : ['HTML', 'CSS', 'Javascript'],
+    onsite : true
+};
+
+const employeePersonB = Object.assign({}, employeePersonA, {
+    name : 'Micheal',
+    designation : 'Backend Developer',
+    yearsOfExperience : 3,
+    previousCompany : 'Amazon',
+    skills : ['Java', 'SQL', 'Node']
+});
+console.log(employeePersonA);
+console.log(employeePersonB);
+
+
+
+
 
 
 
