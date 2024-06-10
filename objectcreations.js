@@ -8,6 +8,9 @@
  -> using Factory functions
 */
 
+console.log('************************************************OBJECT LITERALS**************************************************************************');
+
+
 /* Object Literals
   -> In an object we can add Strings, Numbers, Booleans, Arrays, Objects, Functions, null and undefined.
 */
@@ -35,7 +38,7 @@ const objectUsingObjectLiterals = {
 console.log(objectUsingObjectLiterals);
 console.log(objectUsingObjectLiterals.addressDetails());
 
-console.log('*****************************************************************************************************************************************************************');
+console.log('************************************************CONSTRUCTOR FUNCTION**************************************************************************');
 
 
 /* Constructor Function
@@ -60,7 +63,7 @@ console.log(employeeA.toString());
 const employeeB = new EmployeeDetails('Jane', 'Microsoft', 'Manager');
 console.log(employeeB.toString());
 
-console.log('*****************************************************************************************************************************************************************');
+console.log('************************************************ES6 CLASS SYNTAX**************************************************************************');
 
 
 /* ES6 class syntax
@@ -87,7 +90,7 @@ console.log(personA.toString());
 const personB = new EmployeeDetailsLibrary('Sam', 'Amazon', 'Senior Developer');
 console.log(personB.toString());    
 
-console.log('*****************************************************************************************************************************************************************');
+console.log('************************************************OBJECT CREATE METHOD**************************************************************************');
 
 /* Object.create()
   -> It is used to create objects from another object
@@ -124,7 +127,7 @@ const employeeRollNoB = Object.create(personPrototype, { name : { value : 'Jane'
 console.log(employeeRollNoB);
 console.log(employeeRollNoB.calculateAge());
 
-console.log('*****************************************************************************************************************************************************************');
+console.log('************************************************OBJECT ASSIGN METHOD**************************************************************************');
 
 /* Object.assign()
   -> It is used to merge properties of two or more objects
@@ -152,6 +155,35 @@ const employeePersonB = Object.assign({}, employeePersonA, {
 });
 console.log(employeePersonA);
 console.log(employeePersonB);
+
+console.log('************************************************FACTORY FUNCTIONS**************************************************************************');
+
+/* Factory functions
+  -> It is a function that can return an object
+  -> It is a function that can be used to create multiple objects
+  -> No need to use keywords like new, this etc to invoke the function
+  -> We can invoke the function like any other function and it returns an object
+  -> When Object.create() gives importance to prototypal inheritance, factory functions gives importance to Encapsulation
+*/
+
+function customFactoryFunction(name, company, designation) {
+    return {
+        name : name,
+        company : company,
+        designation : designation,
+        employeeData : function() {
+            return `Employee details \n Name: ${this.name}\n Company: ${this.company}\n Designation: ${this.designation}`;
+        }
+    }
+}
+
+const employeePersonC = customFactoryFunction('Jane', 'Microsoft', 'Manager');
+const employeePersonD = customFactoryFunction('John', 'Google', 'Developer');
+console.log(employeePersonC.employeeData());
+console.log(employeePersonD.employeeData());
+
+
+
 
 
 
