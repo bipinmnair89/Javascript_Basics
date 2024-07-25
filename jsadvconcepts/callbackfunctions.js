@@ -1,16 +1,17 @@
 /*
-Callback functions are functions which are passed as arguments to another function
-Callback functions are also known as higher order functions
-Callback functions are mainly used in asynchronous programming and event handling
-Callback functions are of 2 types - synchronous and asynchronous
+Callback functions are functions which are passed as arguments to another function.
+Callback functions can be implemented without callback keyword.
+Callback functions are also known as higher order functions.
+Callback functions are mainly used in asynchronous programming and event handling.
+Callback functions are of 2 types - synchronous and asynchronous.
 */
 
 
-/*Synchronous callback function with one parameter
+/*Synchronous callback function with one parameter.
   These are executed immediately within the function they are passed to. They do not delay the execution of the main function.
-  common function - displayEmployeeDetails
-  callback function - nameOfEmployee
-  invoking - displayEmployeeDetails(nameOfEmployee)
+  common function - displayEmployeeDetails.
+  callback function - nameOfEmployee.
+  invoking - displayEmployeeDetails(nameOfEmployee).
 */
 
 function displayEmployeeDetailsSync(callback) {
@@ -21,7 +22,7 @@ function nameOfEmployeeSync() {
 }
 displayEmployeeDetailsSync(nameOfEmployeeSync);
 
-//Synchronous callback arrow function with two parameters
+//Synchronous callback arrow function with two parameters.
 
 const displayEmployeeDataSync = (name, callback) => {
     console.log(`Name of the employee is - ${name}`);
@@ -32,9 +33,9 @@ const deptOfEmployeeSync = () => console.log(`Department of the employee is - IT
 displayEmployeeDataSync('George', deptOfEmployeeSync);
 
 /*Asynchronous callback function
-  In the below example we are using setTimeout to simulate the asynchronous nature of the function
-  syntax of setTimeout - setTimeout(function, time)
-  anything outside the setTimeout function will be executed immediately
+  In the below example we are using setTimeout to simulate the asynchronous nature of the function.
+  syntax of setTimeout - setTimeout(function, time).
+  anything outside the setTimeout function will be executed immediately.
 */
 
 const displayEmployeeDataAsync = (name, callback) => {
@@ -46,7 +47,7 @@ const displayEmployeeDataAsync = (name, callback) => {
 }
 const deptOfEmployeeAsync = () => console.log(`Name printed after 3 seconds`);
 
-// displayEmployeeDataAsync('Micheal', deptOfEmployeeAsync);
+displayEmployeeDataAsync('Micheal', deptOfEmployeeAsync);
 
 // Asynchronously fetches user data by ID and calls the callback function with the user object, or null if not found.
 const fetchUserData = (userID, callback) => {
