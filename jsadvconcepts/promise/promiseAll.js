@@ -11,7 +11,7 @@ function promiseB() {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(`Promise B`);
-        }, 1000);
+        }, 2000);
     });
 }
 
@@ -19,7 +19,7 @@ function promiseC() {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(`Promise C`);
-        }, 3000);
+        }, 7000);   //all promises would be moved to the event loop after 7 seconds
     });
 }
 
@@ -44,7 +44,7 @@ function promiseY() {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             reject(`Promise B`);
-        }, 4000);
+        }, 1000);   //all promises would be moved to the event loop after 1 second
     });
 }
 
