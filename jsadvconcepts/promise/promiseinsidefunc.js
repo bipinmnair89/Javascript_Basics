@@ -1,6 +1,6 @@
 //This is a  promise implementation inside a function which checks a number passed as argument is odd or even.
 
-function checkOddOrEven(number, delay) {
+const checkOddOrEven = (number, delay) => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             if(number%2==0) {

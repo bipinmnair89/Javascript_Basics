@@ -1,5 +1,5 @@
 
-function promiseA() {
+const promiseA = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(`PromiseA`);
@@ -7,7 +7,7 @@ function promiseA() {
     });
 }
 
-function promiseB() {
+const promiseB = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(`Promise B`);
@@ -15,7 +15,7 @@ function promiseB() {
     });
 }
 
-function promiseC() {
+const promiseC = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             reject(new Error(`Error with Promise C`));

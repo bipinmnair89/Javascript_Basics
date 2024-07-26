@@ -1,5 +1,5 @@
 //Scenario 1 - where all promises are resolved.
-function promiseA() {
+const promiseA =() => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(`PromiseA`);
@@ -7,7 +7,7 @@ function promiseA() {
     });
 }
 
-function promiseB() {
+const promiseB = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(`Promise B`);
@@ -15,7 +15,7 @@ function promiseB() {
     });
 }
 
-function promiseC() {
+const promiseC = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(`Promise C`);
@@ -32,7 +32,7 @@ console.log(`*******************************************************************
 
 //Scenario 2 - where one of the promises is rejected.
 
-function promiseX() {
+const promiseX = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(`PromiseX`);
@@ -40,7 +40,7 @@ function promiseX() {
     });
 }
 
-function promiseY() {
+const promiseY = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             reject(`Promise B`);
@@ -48,7 +48,7 @@ function promiseY() {
     });
 }
 
-function promiseZ() {
+const promiseZ = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(`Promise Z`);
