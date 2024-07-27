@@ -58,4 +58,4 @@ const promiseZ = () => {
 
 Promise.all([promiseX(), promiseY(), promiseZ()])
        .then(result => { console.log(result); }) //The result is an array of resolved promises
-       .catch(error => { console.log(`In Promise X,Y,Z All promises didn't get resolved`); });
+       .catch(error => { console.log(`In Promise X,Y,Z one of promises got rejected`); });
