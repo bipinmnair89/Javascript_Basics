@@ -7,7 +7,10 @@
     -> Promise result -> undefined(initially), value, error.
     -> Promise can be created using Promise constructor. const myPromise = new Promise((resolve, reject) =>{//async code});
     -> Promise handlers -> then, catch, finally. myPromise.then(result => {}), myPromise.catch(error => {}), myPromise.finally(() => {});
-    -> Promise chaining - where each then() will return a separate promise.  
+    -> Promise chaining - where each then() will return a separate promise. 
+    -> Promises are used to make asynchronous operations appear to be synchronous.
+    -> For example, In console we print A,C,B(as B is async it appears after A,C which are sync).
+    -> Here we can make B a promise and in then() handler we can print C. Which would print in the order A,B,C. Thus making it look like synchronous. 
     -> Promise.all() -> used to execute all promises in parallel. Syntax - Promise.all([promise1, promise2, promise3]).then(result => {}).catch(error => {});
     -> Promise.all will enter the then() handle only when all promises are resolved. Else it would go to catch().
     -> Promise.all will wait either for all promises to get resolved or it will wait till one promise gets rejected.
@@ -28,4 +31,13 @@
     -> After a promise is rejected, catch() is passed to the PromiseRejectReactions with the Promise result.
     -> PromiseIsHandled is false when promise state is pending and PromiseIsHandled is true when promise state is fulfilled/rejected.
     -> reference -  https://lydiahallie.framer.website/blog/promise-execution
+                 -  https://dev.to/makoto0825/how-to-use-promise-chaining-in-javascript-391c
+
+
+    Async/Await in Promises
+    -> async is used along with the function
+    -> await is used in the async function for the steps that needs to be completed one by one.
+    -> async/await can be used to run the promise fulfillment handlers.
+    -> async/await use try catch block.
+    -> reference - https://dev.to/makoto0825/how-to-use-asyncawait-in-promise-38hc             
 */
