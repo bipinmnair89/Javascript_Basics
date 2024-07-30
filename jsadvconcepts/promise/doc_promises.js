@@ -35,9 +35,13 @@
 
 
     Async/Await in Promises
-    -> async is used along with the function
-    -> await is used in the async function for the steps that needs to be completed one by one.
-    -> async/await can be used to run the promise fulfillment handlers.
+    -> async/await is used mostly along with promises to make asynchronous operations appear to be synchronous.
+    -> async is used along with the function, await is used in the async function for the async steps that needs to be completed one by one.
+    -> async functions returns a promise by default and hence can be coupled with handlers then(), catch(), finally().
+    -> async function can have zero or more await statements.
+    -> async function can be invoked within a normal function.
     -> async/await use try catch block.
+    -> we can create promises and use then create an async function along with await to handle the promises.
+    -> we can create async function and as it by default returns a promise can use promise handlers then(), catch(), finally().
     -> reference - https://dev.to/makoto0825/how-to-use-asyncawait-in-promise-38hc             
 */
