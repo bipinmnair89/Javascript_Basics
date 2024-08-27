@@ -62,7 +62,7 @@ Reduce method (aggregation) is used when we have to apply a function to each ele
 It returns a single value
 */
 
-function getSumOfNumbers(numbersGroup) {
+function getSumOfNumbers(numbers) {
     let sumOfNumbers = numbers.reduce((accumulator, currentValue) => accumulator+currentValue, 0);
     console.log(sumOfNumbers);
 }
