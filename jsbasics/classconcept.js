@@ -1,8 +1,8 @@
 /* This file is to understand class concept in Javascript
   -> A .js file can contain multiple classes
-  -> Class is a blueprint for creating objects, objects
+  -> Class is a blueprint for creating objects
   -> It is not necessary that .js file name and class name must be the same
-  -> In a class, constructor can be defined with the name constructor and there need not be a name
+  -> In a class, constructor can be defined with the keyword constructor and there need not be a name
   -> Constructor overloading is not possible in Javascript
   -> Class can have constructors, getters, setters, static and non static methods.
 */

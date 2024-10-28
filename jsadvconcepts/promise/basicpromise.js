@@ -1,4 +1,4 @@
-//This is a basic promise implementation which checks a randomly generated function is odd or even.
+//This is a basic promise implementation which checks a randomly generated function is odd(returns error) or even(returns the number).
 
 
 const myPromise = new Promise((resolve,reject) => {
@@ -10,7 +10,7 @@ const myPromise = new Promise((resolve,reject) => {
         } else {
             reject(new Error("Please try again..."));
         }
-    });
+    },2000);
 })
 
 //while using then catch finally, we should add semicolon only after finally.

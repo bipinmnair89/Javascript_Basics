@@ -1,7 +1,7 @@
 /* This file contains various tips and tricks for Javascript
 */
 
-// Finding unique values/remove duplicates in an array -> using ...new Set and Array.from
+// Finding unique values/remove duplicates in an array -> using spread operator or Array.from along with Set keyword
 const arrayOfNumbers = [1, 2, 3, 4, 5, 1, 3, 4, 5];
 const uniqueArrayOfNumbers = [...new Set(arrayOfNumbers)];
 console.log(uniqueArrayOfNumbers);
@@ -10,11 +10,11 @@ const arrayOfStrings = ["apple", "orange", "grapes", "mango", "apple", "orange",
 const uniqueArrayOfStrings = Array.from(new Set(arrayOfStrings));
 console.log(uniqueArrayOfStrings);   
 
-//Remove falsy values from an array
+//Remove falsy values from an array - using .filter(Boolean)
 const arrayWithFalsyValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "", "0", null, undefined, NaN, false];
 console.log(arrayWithFalsyValues.filter(Boolean));
 
-//check if array is empty or not
+//check if array is empty or not - 2 ways, either with isArray or length
 let emptyArray = [];
 console.log(Array.isArray(emptyArray));
 console.log(emptyArray.length === 0);
@@ -24,19 +24,19 @@ let objectArray = [1, 2, 3, 4, 5, "apple", "orange", "grapes", "mango"];
 console.log(objectArray.includes(3));
 console.log(objectArray.includes("apple"));
 
-//Array to String
+//Array to String - join
 const arrayToString = ["apple", "orange", "grapes", "mango"];
 console.log(arrayToString.join(" "));
 
-//Make copy of an array
+//Make copy of an array - spread operator
 const copiedArray =[...arrayToString];
 console.log(`Copied array is - ${copiedArray}`);
 
-//Truncate an array
+//Truncate an array - slice
 const truncatedArray = copiedArray.slice(0, 2);
 console.log(`Truncated array is - ${truncatedArray}`);
 
-//Get last item in an array
+//Get last item in an array - slice
 console.log(`Last item in truncated array is ${truncatedArray.slice(-1)}`);
 
 //Number to String -> using String()
@@ -121,7 +121,7 @@ function checkPropertyPresentTypeB(propertyName){
     }
     checkPropertyPresentTypeB("age");
 
-//retrieve all properties of an object or Object to Array
+//retrieve all properties of an Object to Array
 console.log(Object.keys(person));
 console.log(Object.values(person));
 console.log(Object.entries(person));

@@ -8,7 +8,7 @@
     -> Promise can be created using Promise constructor. const myPromise = new Promise((resolve, reject) =>{//async code});
     -> Promise handlers -> then, catch, finally. myPromise.then(result => {}), myPromise.catch(error => {}), myPromise.finally(() => {});
     -> Promise chaining - where each then() will return a separate promise. 
-    -> Promises are used to make asynchronous operations appear to be synchronous.
+    -> Promises are used to make asynchronous operations run in a structured manner.
     -> For example, In console we print A,C,B(as B is async it appears after A,C which are sync).
     -> Here we can make B a promise and in then() handler we can print C. Which would print in the order A,B,C. Thus making it look like synchronous. 
     -> Promise.all() -> used to execute all promises in parallel. Syntax - Promise.all([promise1, promise2, promise3]).then(result => {}).catch(error => {});
@@ -35,7 +35,7 @@
 
 
     Async/Await in Promises
-    -> async/await is used mostly along with promises to make asynchronous operations appear to be synchronous.
+    -> async/await is used mostly along with promises to make asynchronous operations to run in a structured manner.
     -> async is used along with the function, await is used in the async function for the async steps that needs to be completed one by one.
     -> async functions returns a promise by default and hence can be coupled with handlers then(), catch(), finally().
     -> async function can have zero or more await statements.
