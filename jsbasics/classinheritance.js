@@ -1,6 +1,6 @@
 /* This file demonstrates how to use inheritance in Javascript
     -> extends keyword is used to implement inheritance
-    -> super keyword is used to call the parent class constructor
+    -> super keyword is used to call the parent class constructor, methods, variables.
     -> child class reference variable can be used to call the parent class methods
     -> multiple inheritance is not possible in Javascript
     -> multilevel inheritance is possible in Javascript
@@ -23,6 +23,9 @@ class Car extends Vehicle {
         this.model = model;
     }
 
+    unlockCar() {
+        console.log(`Unlocking the car`);
+    }
     drive() {
         console.log(`${this.brand} ${this.model} is driving`);
     }
@@ -37,6 +40,7 @@ class Tesla extends Car {
     }
     
     charging() {
+        super.unlockCar();
         console.log(`${this.brand} ${this.model} is an ${this.fuelType} vehicle and is charging`);
     }
 }
@@ -49,6 +53,7 @@ class BMW extends Car {
     }
 
     refueling() {
+        super.unlockCar();
         console.log(`${this.brand} ${this.model} is a ${this.fuelType} vehicle and is refilling`);
     }
 }
